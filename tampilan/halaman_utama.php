@@ -62,6 +62,9 @@
         case "ubah_siswa":
             include "../ubah/ubah_siswa.php";
             break;
+        case "ubah_kegiatan":
+            include "../ubah/ubah_kegiatan.php";
+            break;
         case "ubah_pegawai":
             include "../ubah/ubah_pegawai.php";
             break;

@@ -1,4 +1,5 @@
 <?php
+include "../koneksi.php";
 if(isset($_POST['tombol_tambah'])){
 
     $nis            = $_POST['nis'];
@@ -10,7 +11,11 @@ if(isset($_POST['tombol_tambah'])){
     $kelas          = $_POST['kelas'];
     $angkatan       = $_POST['angkatan'];
 
+    $pass_siswa = "siswa".$nis;
+    $enkrip = password_hash($pass_siswa, PASSWORD_DEFAULT);
+
     $hasil = mysqli_query($koneksi, "INSERT INTO siswa VALUES('$nis', '$no_absen', '$nama_siswa', '$no_telp', '$email', '$id_jurusan', '$kelas', '$angkatan')");
+    $hasil_pengguna = mysqli_query($koneksi, "INSERT INTO pengguna VALUES(NULL, NULL, '$nis', '$enkrip')");
 
     if(!$hasil){
         echo "<script>alert('gagal memasukkan data siswa');window.location.href='halaman_utama.php?page=tambah_siswa'</script>";
