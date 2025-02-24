@@ -18,6 +18,7 @@
                                 <a class="nav-link" href="halaman_utama.php?page=pegawai">Data Pegawai</a>
                                 <a class="nav-link" href="halaman_utama.php?page=siswa">Data Siswa</a>
                                 <a class="nav-link" href="halaman_utama.php?page=kategori">Data Kategori</a>
+                                <a class="nav-link" href="halaman_utama.php?page=kegiatan">Data kegiatan</a>
                             </nav>
                         </div>
                         <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapsePages" aria-expanded="false" aria-controls="collapsePages">

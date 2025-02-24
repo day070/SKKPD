@@ -59,6 +59,12 @@
         case "tambah_pegawai":
             include "../tambah/tambah_pegawai.php";
             break;
+        case "tambah_kategori":
+            include "../tambah/tambah_kategori.php";
+            break;
+        case "tambah_kegiatan":
+            include "../tambah/tambah_kegiatan.php";
+            break;
         case "ubah_siswa":
             include "../ubah/ubah_siswa.php";
             break;

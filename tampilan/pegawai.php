@@ -57,7 +57,7 @@ include("../koneksi.php")
                         </div>
                         <div class="card-body">
                             <table class="table table-striped table-hover">
-                                <a href="halaman_utama.php?page=tambah_siswa" class="btn btn-success float-end">+ Tambah</a>
+                                <a href="halaman_utama.php?page=tambah_pegawai" class="btn btn-success float-end">+ Tambah</a>
                                 <thead>
                                     <tr>
                                         <th scope="col">No</th>

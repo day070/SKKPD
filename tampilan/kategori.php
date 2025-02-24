@@ -67,6 +67,7 @@ if (isset($_GET['id_kategori'])) {
                             DataTable Example
                         </div>
                         <div class="card-body">
+                        <a href="halaman_utama.php?page=tambah_kategori" class="btn btn-success float-end">+ Tambah</a>
                             <table class="table table-striped table-hover">
                                 <thead>
                                     <tr>

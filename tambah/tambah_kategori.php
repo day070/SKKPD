@@ -1,16 +1,17 @@
 <?php
-include ("../koneksi.php");
+include "../koneksi.php";
 if (isset($_POST['tombol_tambah'])) {
 
-    $nama_lengkap   = $_POST['nama_lengkap'];
-    $username       = $_POST['username'];
+    $id_kategori            = $_POST['id_kategori'];
+    $kategori       = $_POST['kategori'];
+    $sub_kategori     = $_POST['sub_kategori'];
 
-    $hasil = mysqli_query($koneksi, "INSERT INTO pegawai VALUES('$nama_lengkap', '$username')");
+    $hasil = mysqli_query($koneksi, "INSERT INTO kategori VALUES('$id_kategori', '$kategori', '$sub_kategori')");
 
     if (!$hasil) {
         echo "<script>alert('gagal memasukkan data siswa');window.location.href='halaman_utama.php?page=tambah_siswa'</script>";
     } else {
-        echo "<script>alert('berhasil memasukkan data siswa');window.location.href='halaman_utama.php?page=coba'</script>";
+        echo "<script>alert('berhasil memasukkan data siswa');window.location.href='halaman_utama.php?page=siswa'</script>";
     }
 }
 ?>
@@ -29,14 +30,23 @@ if (isset($_POST['tombol_tambah'])) {
     <form action="" method="post">
 
         <div>
-            <input type="text" placeholder="Kategori" name="kategori" autocomplete="off">
-            <label for="floatingInput">Kategori</label>
+            <input type="text" placeholder="id_kategori" name="id_kategori" autocomplete="off">
+            <label for="floatingInput">id_kategori</label>
         </div>
 
         <div>
-            <input type="text" placeholder="Masukan Usernama" name="username" autocomplete="off">
-            <label for="floatingInput">Username</label>
+            <label>kategori</label><br>
+            <input type="radio" name="kategori" value="Wajib">
+            <label for="html">Wajib</label><br>
+            <input type="radio" name="kategori" value="Opsional">
+            <label for="html">Opsional</label><br>
         </div>
+
+        <div>
+            <input type="text" placeholder="Sub kategori" name="sub_kategori" autocomplete="off">
+            <label for="floatingInput">Sub Kategori</label>
+        </div>
+
         <input type="submit" name="tombol_tambah" class="btn btn-success" id="" value="simpan">
 
     </form>
