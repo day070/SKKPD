@@ -44,13 +44,13 @@ if(isset($_POST['tombol_tambah'])){
     </div>
 
     <select name="kategori">
-        <option>pilih kategori</option>
+        <option>pilih Sub Kategori</option>
         <?php
             include "../koneksi.php";
             $list = mysqli_query($koneksi, "SELECT * FROM kategori");
             while($data = mysqli_fetch_assoc($list)){
         ?>
-        <option value="<?= $data['id_kategori']; ?>"><?= $data['kategori']; ?></option>
+        <option value="<?= $data['id_kategori']; ?>"><?= $data['sub_kategori']; ?></option>
         <?php
             }
         ?>

@@ -15,10 +15,13 @@
                         </a>
                         <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
                             <nav class="sb-sidenav-menu-nested nav">
-                                <a class="nav-link" href="halaman_utama.php?page=pegawai">Data Pegawai</a>
-                                <a class="nav-link" href="halaman_utama.php?page=siswa">Data Siswa</a>
-                                <a class="nav-link" href="halaman_utama.php?page=kategori">Data Kategori</a>
-                                <a class="nav-link" href="halaman_utama.php?page=kegiatan">Data kegiatan</a>
+                                <a class="nav-link <?php if($_GET['page']=='siswa'){ echo "active";} else{ echo "";} ?>" href="halaman_utama.php?page=siswa">Data Siswa</a>
+                                <a class="nav-link <?php if($_GET['page']=='jurusan'){ echo "active";} else{ echo "";} ?>" href="halaman_utama.php?page=jurusan">Data jurusan</a>
+                                <a class="nav-link <?php if($_GET['page']=='pegawai'){ echo "active";} else{ echo "";} ?>" href="halaman_utama.php?page=pegawai">Data Pegawai</a>
+                                <a class="nav-link <?php if($_GET['page']=='pengguna'){ echo "active";} else{ echo "";} ?>" href="halaman_utama.php?page=pengguna">Data pengguna</a>
+                                <a class="nav-link <?php if($_GET['page']=='kategori'){ echo "active";} else{ echo "";} ?>" href="halaman_utama.php?page=kategori">Data Kategori</a>
+                                <a class="nav-link <?php if($_GET['page']=='kegiatan'){ echo "active";} else{ echo "";} ?>" href="halaman_utama.php?page=kegiatan">Data kegiatan</a>
+                                <a class="nav-link <?php if($_GET['page']=='sertifikat'){ echo "active";} else{ echo "";} ?>" href="halaman_utama.php?page=sertifikat">Data sertifikat</a>
                             </nav>
                         </div>
                         <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapsePages" aria-expanded="false" aria-controls="collapsePages">
